@@ -35,5 +35,22 @@ namespace Entity2
             }
             return Resta;
         }
+
+        public int Multiplicar(int Num1,int Num2, Action<string> EjemploAction)
+        {
+            int Multi = Num1 * Num2;
+            if(Multi == 100)
+            {
+                EjemploAction("La multiplicación me devolvió 100 y me da ansiedad");
+            }
+            return Multi;
+        }
+
+        public string SumaFuncOp(int Num1, int Num2, Func<int,int,string> EjemploFunc)
+        {
+            string resultado = EjemploFunc(Num1, Num2);
+            return resultado;
+        }
+
     }
 }

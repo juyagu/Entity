@@ -21,7 +21,8 @@ namespace Entity2
             int Num2 = Convert.ToInt32(txt_del_2.Text);
             refe = new RefOperaciones();
             refe.MostrarMensaje(" -------------- MENSAJE POR TERMINAL DEL DEBUG -------");
-            lb_delegate.Text = "El resultado es: " + refe.EjemploDelegado(Num1, Num2).ToString();
+            //lb_delegate.Text = "El resultado es: " + refe.EjemploDelegado(Num1, Num2).ToString();
+            lb_delegate.Text = refe.SumaFunc(Num1, Num2);
         }
 
         protected void RestarAnonimo(object sender, EventArgs e)
@@ -30,6 +31,15 @@ namespace Entity2
             int Num2 = Convert.ToInt32(txt_an_2.Text);
             refe = new RefOperaciones();
             lb_anonimo.Text = "El resultado es: " + refe.EjemploLambda(Num1, Num2).ToString();
+        }
+
+        protected void MultiplicarAction(object sender, EventArgs e)
+        {
+            int Num1 = Convert.ToInt32(txt_action_1.Text);
+            int Num2 = Convert.ToInt32(txt_action_2.Text);
+            refe = new RefOperaciones();
+            lb_action.Text = "El resultado es: " + refe.EjemploAction(Num1, Num2).ToString();
+            //lb_anonimo.Text = "El resultado es: " + refe.EjemploLambda(Num1, Num2).ToString();
         }
     }
 }
